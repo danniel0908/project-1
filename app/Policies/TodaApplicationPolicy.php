@@ -6,7 +6,7 @@ use App\Models\TODAapplication;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 
-class TODAApplicationPolicy
+class TodaApplicationPolicy
 {
     /**
      * Determine whether the user can view any models.
