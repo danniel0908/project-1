@@ -1,35 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
 use App\Models\TODAapplication;
 use App\Models\TodaRequirements;
 use App\Models\TODAapplicationHistory;
 use App\Models\PredefinedMessage;
-
-
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-
 use App\Imports\TODAapplicationImport;
 use Maatwebsite\Excel\Facades\Excel;
-
 use Illuminate\Support\Facades\Storage;
 use PDF;
 use Google\Service\Drive\DriveFile;
-
-
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
-
 use App\Http\Controllers\SendSMSController;
-
-
-
 class TodaApplicationController extends Controller
 {
 
@@ -51,7 +39,6 @@ class TodaApplicationController extends Controller
          $this->drive = new \Google\Service\Drive($client);
          
         $this->folder_id = config('services.google.toda_application_folder');
-
     }
  
     /**
@@ -64,8 +51,8 @@ class TodaApplicationController extends Controller
     public function index(Request $request)
     {
         $search = $request->get('search');
-        $sortField = $request->get('sort', 'created_at'); // Default sort by created_at
-        $sortDirection = $request->get('direction', 'desc'); // Default direction is descending
+        $sortField = $request->get('sort', 'created_at'); 
+        $sortDirection = $request->get('direction', 'desc'); 
         
         $query = TODAapplication::query();
         
@@ -81,8 +68,7 @@ class TodaApplicationController extends Controller
                 ->orWhere('Plate_no', 'like', '%'.$search.'%')
                 ->orWhere('TODA_Association', 'like', '%'.$search.'%');
             });
-        }
-        
+        }  
         // Apply sorting
         switch ($sortField) {
             case 'toda_association':
@@ -99,7 +85,7 @@ class TodaApplicationController extends Controller
                 $query->orderBy('Status', $sortDirection);
                 break;
             case 'progress':
-                // For progress, we'll need to sort after fetching the data
+                // For progress, need to sort after fetching the data
                 break;
             default:
                 $query->orderBy('created_at', $sortDirection);
@@ -842,5 +828,4 @@ class TodaApplicationController extends Controller
             ], 500);
         }
     }
-
 }
