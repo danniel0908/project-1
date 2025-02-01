@@ -92,8 +92,6 @@ class GoogleAuthController extends Controller
             Cache::put('google_drive_access_token', $token['access_token'], $expiresIn - 300); // Buffer of 5 minutes
         }
 
-        // You might want to store refresh token in database for permanent storage
-        // This is just an example - implement secure storage as per your needs
         if (isset($token['refresh_token'])) {
             // Store in database or other permanent storage
             // Example: $user->update(['google_refresh_token' => $token['refresh_token']]);
