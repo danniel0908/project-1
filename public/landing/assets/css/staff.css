@@ -1,0 +1,126 @@
+/**
+* Template Name: QuickStart
+* Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+* Updated: May 18 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------------------------
+# Staff
+--------------------------------------------------------------*/
+.chefs {
+  text-align: center;
+  padding: 50px 45px 20px 45px;
+  background-color: #f8f8f8;
+}
+
+.chefs h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Inter", sans-serif;
+}
+
+.chefs p {
+  font-size: 17px;
+  color: #777;
+  margin-bottom: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+  
+  
+  
+
+}
+.paragraph {
+  padding: 0 60px 10px 60px;
+}
+
+.chef-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.chef-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.chef-card img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.chef-card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #333;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.chef-card .title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #777;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #555;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+
+.chef-card:hover {
+  background-color: #007bff; 
+  color: white; 
+  cursor: pointer;
+}
+
+.chef-card:hover h2,
+.chef-card:hover .title,
+.chef-card:hover .social-icons a {
+  color: white; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chef-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+  
+
+
+
+/*-----Endof staff Section -----
